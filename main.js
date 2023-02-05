@@ -1,3 +1,6 @@
+const myKey = config.apiKey;
+console.log(config)
+
 let lon;
 let lat;
 // let city="Paris";
@@ -15,11 +18,11 @@ window.addEventListener("load", () => {
       lat = position.coords.latitude;
   
       // API ID
-      const api = "bd3185ceae346533e977e89efe32d56b";
+      const api = myKey;
   
       // API URL
       const base =
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bd3185ceae346533e977e89efe32d56b`;
+        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
   
       // Calling the API
       fetch(base)
